@@ -19,6 +19,10 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('albums', mymusic_views.list_album, name='list_album'),
+    path('albums/<int:pk>/edit/',
+    #      contacts_views.edit_contact,
+    #      name='edit_contact'),
 ]
 
 if settings.DEBUG:
