@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-music-genolajohnson--genola.repl.co','django-music-genolajohnson.genola.repl.co' ]
 
 # Application definition
 
@@ -49,8 +49,9 @@ INSTALLED_APPS = [
     'django_extensions',
 
     # Project-specific
-    'users',
-]
+    'users', 
+    'mymusic', 
+    ]
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',

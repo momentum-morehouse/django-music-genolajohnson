@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+from mymusic import views as mymusic_views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('albums', mymusic_views.list_album, name='list_album'),
-    path('albums/<int:pk>/edit/',
+    path('', mymusic_views.list_albums, name='home'),
+    # path('albums/<int:pk>/edit/',
     #      contacts_views.edit_contact,
     #      name='edit_contact'),
 ]
