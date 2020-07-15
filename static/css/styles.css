@@ -1,17 +1,32 @@
 h1 {
-    color: red
+    color: red;
     }
 
 body{
-    background-color: darkslategray
+     background-color: darkslategray;
 }
 
-.container{
-    
+/* #all_albums {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    border: red 2px solid;
+} */
+
+.album {
+    border:white 2px solid;
 }
-        
+
+h1 {
+    text-align: center;
+}
+
+#all_albums {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 90px auto 90 px;
+    column-gap: 10px;
+    row-gap: 15px;
+} 
 
 
-
-
-
+/* grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
