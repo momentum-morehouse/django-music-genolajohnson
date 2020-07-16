@@ -20,12 +20,19 @@ from mymusic import views as mymusic_views
 
 urlpatterns = [
     path('accounts/', include( 'registration.backends.simple.urls')),
+
     path('admin/', admin.site.urls),
-    path('albums', mymusic_views.list_albums, name='home'),
-    path('albums/<int:pk>/edit/',mymusic_views.edit_album,
+
+    path('albums /<int:pk>/list_album/', mymusic_views.list_album, name='list_album'),
+
+    path('albums /<int:pk>/edit/', mymusic_views.edit_album,
     name='edit_album'),
-    path('albums/add', mymusic_view.add_album, name='add_album'),
-    path('a;bums/<int:pk>/delete/'mymusic_views.delete_album, name='delete_album'),
+
+    path('albums /<int:pk>/add/', mymusic_views.add_album, name='add_album'),
+
+    path('albums /<int:pk>/delete/', mymusic_views.delete_album, name='delete_album'),
+    
+    ]
 
 if settings.DEBUG:
     import debug_toolbar
