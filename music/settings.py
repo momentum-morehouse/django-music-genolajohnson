@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['django-music-genolajohnson--genola.repl.co','django-music-geno
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

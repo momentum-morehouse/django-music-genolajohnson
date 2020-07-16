@@ -19,6 +19,7 @@ from django.urls import include, path
 from mymusic import views as mymusic_views 
 
 urlpatterns = [
+    path('accounts/', include( 'registration.backends.simple.urls')),
     path('admin/', admin.site.urls),
     path('', mymusic_views.list_albums, name='home'),
     # path('albums/<int:pk>/edit/',

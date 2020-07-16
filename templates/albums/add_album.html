@@ -5,9 +5,13 @@
 
 {% extends "base.html" %}
 
-{% block content %}
+
 <div class = 'albums'>
     {% for album in albums %}
+
+    <form action="{% url 'add_album' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
     <div class = 'album'>
         <p>album.artist_name</p> 
         <p>album.title</p> 
@@ -17,8 +21,5 @@
     {% endfor %}
 </div>
 
-
-
-
-
 {% endblock %}
+
