@@ -1,9 +1,9 @@
-all_albums {
+/* all_albums {
     height: 300px;
-    display: flex;
+    display: flex flex-wrap;
     flex-direction: row;
     flex-wrap: wrap;
-}
+} */
 h1 {
     color: darkkhaki;
     text-align: center;

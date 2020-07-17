@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Album
-from .forms import albumsForm
+from .forms import AlbumForm
 
 # Create your views here.
 @login_required
@@ -38,3 +38,9 @@ def release_date(request):
     
     return render(request, "release/release_date.html",
                   {"release": release})
+
+def add_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'POST':
+        album.delete()
+        return redirect(to='list_albums')
